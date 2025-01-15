@@ -1,0 +1,308 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    background: linear-gradient(to bottom, #0056b3, #66b3ff);
+    color: white;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banner button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #0056b3;
+    background-color: rgba(2, 42, 58, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.banner button:hover {
+    background-color: rgba(3, 43, 59, 0.012);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #003d80;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item h2 {
+    color: #0d6efd;
+    font-size: 22px;
+}
+
+.carousel-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.carousel-item a {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.carousel-item a:hover {
+    text-decoration: underline;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+footer {
+    width: 100%; /* Ensure the footer spans the full width */
+    background-color: #09449d; /* Consistent background color */
+    color: white;
+    text-align: center;
+    padding: 10px 20px; /* Add vertical spacing for better readability */
+    position: relative; /* Keeps the footer static at the bottom */
+    bottom: 0;
+}
+.info-box {
+    
+    color: blue; /* White text */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.info-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+ul {
+    list-style-type: none; /* Remove default bullets */
+    margin-left: 20px;
+    padding: 0;
+}
+
+li::before {
+
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.blue-text {
+    color: blue;
+    font-weight: bold; /* Optional, for emphasis */
+}
+h1 {
+    font-size: 20px; /* Adjust to desired size */
+}
+
+/* Basic styling for the section */
+.cards-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centers the cards horizontally */
+    gap: 20px; /* Adds space between the cards */
+    margin-top: 50px;
+}
+
+/* Card Container Styling */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px; /* Optional: Adjust width */
+    padding: 15px;
+    background-color: #5f62bd; /* Set a separate background color */
+    border-radius: 10px;
+}
+
+/* Card Styling */
+.card1 {
+    display: flex;
+    flex-direction:column;
+    align-items: center; /* Centers the content inside the card */
+    justify-content: center; /* Centers content vertically */
+    background-color:skyblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.card2 {
+    display: flex;
+    flex-direction:column;
+    align-items: center; /* Centers the content inside the card */
+    justify-content: center; /* Centers content vertically */
+    background-color: lightcoral;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.card3 {
+    display: flex;
+    flex-direction:column;
+    align-items: center; /* Centers the content inside the card */
+    justify-content: center; /* Centers content vertically */
+    background-color: lightgreen;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.card4 {
+    display: flex;
+    flex-direction:column;
+    align-items: center; /* Centers the content inside the card */
+    justify-content: center; /* Centers content vertically */
+    background-color: lightslategrey;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Card Image Styling */
+.card-img {
+    width: 100px; /* Adjust size */
+    height: 100px; /* Adjust size */
+    margin-bottom: 15px;
+}
+
+/* Link Styling */
+.card a {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}

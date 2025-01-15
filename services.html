@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance Submission | Government Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f2ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 98%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 80px auto 20px; /* Adjusted margin-top to account for fixed navbar */
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0056b3;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #0056b3;
+            outline: none;
+        }
+
+        .submit-btn {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #003b80;
+        }
+
+        footer {
+            background-color: #003b80;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Grievance Redressal System</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Submit Your Grievance</h2>
+        <form id="grievanceForm">
+            <div class="form-group">
+                <label for="grievanceTitle">Grievance Title</label>
+                <input type="text" id="grievanceTitle" name="grievanceTitle" placeholder="Enter grievance title" required>
+            </div>
+            <div class="form-group">
+                <label for="grievanceDescription">Grievance Description</label>
+                <textarea id="grievanceDescription" name="grievanceDescription" placeholder="Describe your grievance" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="grievanceCategory">Category</label>
+                <input type="text" id="grievanceCategory" name="grievanceCategory" placeholder="Enter category (e.g., service, delay)" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit Grievance</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('grievanceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const grievanceTitle = document.getElementById('grievanceTitle').value;
+            const grievanceDescription = document.getElementById('grievanceDescription').value;
+            const grievanceCategory = document.getElementById('grievanceCategory').value;
+
+            const grievance = {
+                title: grievanceTitle,
+                description: grievanceDescription,
+                category: grievanceCategory,
+                date: new Date().toLocaleString()
+            };
+
+            const grievances = JSON.parse(localStorage.getItem('grievances')) || [];
+            grievances.push(grievance);
+            localStorage.setItem('grievances', JSON.stringify(grievances));
+
+            alert('Your grievance has been submitted successfully!');
+            window.location.href = 'status.html';
+        });
+    </script>
+
+<footer>
+    <div class="footer-content">
+        <p>Portal is compatible with all major browsers like Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, etc.</p>
+        <p class="resolution">Best viewed in 1440 x 900 resolution</p>
+        <div class="logos">
+            <img src="gandhi.jpg">
+            <img src="digital.jpg">
+            <img src="digital-india-logo.jpg">
+            <img src="india-gov-logo.jpg">
+            <img src="niclogo.jpg">
+            <img src="made-in-india.jpg">
+            <img src="web-directory.jpg">
+        </div>
+
+
+        <div class="disclaimer">
+            <p><strong>Disclaimer</strong>: Website Policies | Web Information Manager Version 7.0.01092019.0.0, Copyright © 2024 | Last Updated On: 04-12-2024 | Total Visitors: 3,910,662 (since 19-01-2024)</p>
+        </div>
+
+        <p>Powered by <strong>Digital India</strong> | NIC</p>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Government Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f2ff;
+        }
+        header {
+            background-color: #003b80;
+            color: #fff;
+            padding: 5px 20px;  /* Reduced padding */
+            display: flex;
+            justify-content: space-between; /* Align items */
+            align-items: center;
+        }
+        .logo {
+            font-size: 20px;  /* Adjusted font size */
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-end; /* Align links to the right */
+            background-color: #003b80;
+            padding: 5px 0; /* Reduced padding */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px; /* Adjusted margin */
+            font-size: 16px;  /* Adjusted font size */
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .contact-details div {
+            width: 48%;
+        }
+        .contact-details h2 {
+            color: #0056b3;
+        }
+        .contact-details p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #003b80;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .help-feedback-panel {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .help-feedback-panel h2 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        .help-feedback-panel p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #003b80;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function submitFeedback() {
+            alert("Feedback submitted successfully!");
+            window.location.href = "home.html"; // Redirect to the home page
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Grievance Redressal System</div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="registration.html">Register</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+            
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        
+        <!-- Contact Details Section -->
+        <div class="contact-details">
+            <div>
+                <h2>Contact Information</h2>
+                <p><strong>Office Address:</strong></p>
+                <p>IARE Block1, 1st Floor, Dundigal, Hyderabad, Telangana, India</p>
+                <p><strong>Email:</strong> <a href="mailto:shivakrishnareddaveni346@gmail.com">shivakrishnareddaveni346@gmail.com</a></p>
+                <p><strong>Phone Number:</strong> +91 9912714855</p>
+            </div>
+            <div>
+                <h2>Working Hours</h2>
+                <p><strong>Monday to Friday:</strong> 9:00 AM - 6:00 PM</p>
+                <p><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
+                <p><strong>Sunday:</strong> Closed</p>
+            </div>
+        </div>
+
+        <!-- Help and Feedback Panel -->
+        <div class="help-feedback-panel">
+            <h2>Help and Feedback</h2>
+            <p>If you encounter any issues or need assistance, please refer to our FAQs or contact our support team for help. We value your feedback to improve our services.</p>
+            <div class="form-group">
+                <label for="feedback">Leave Your Feedback:</label>
+                <textarea id="feedback" placeholder="Write your feedback or queries here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Portal is compatible with all major browsers like Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, etc.</p>
+            <p class="resolution">Best viewed in 1440 x 900 resolution</p>
+            <div class="logos">
+                <img src="gandhi.jpg">
+                <img src="digital.jpg">
+                <img src="digital-india-logo.jpg">
+                <img src="india-gov-logo.jpg">
+                <img src="niclogo.jpg">
+                <img src="made-in-india.jpg">
+                <img src="web-directory.jpg">
+            </div>
+    
+    
+            <div class="disclaimer">
+                <p><strong>Disclaimer</strong>: Website Policies | Web Information Manager Version 7.0.01092019.0.0, Copyright © 2024 | Last Updated On: 04-12-2024 | Total Visitors: 3,910,662 (since 19-01-2024)</p>
+            </div>
+    
+            <p>Powered by <strong>Digital India</strong> | NIC</p>
+        </div>
+    </footer>
+</body>
+</html>

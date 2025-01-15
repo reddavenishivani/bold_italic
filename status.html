@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status - Grievance Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#e6f2ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 98%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 80px auto 20px; /* Adjusted margin-top for fixed navbar */
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0056b3;
+            text-align: center;
+        }
+
+        .grievance-item {
+            padding: 15px;
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .grievance-item p {
+            margin: 5px 0;
+        }
+
+        .no-grievances {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #003b80;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Grievance Redressal System</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Your Submitted Grievances</h2>
+
+        <div id="grievanceList">
+            <!-- Grievance items will be displayed here -->
+        </div>
+
+        <a href="services.html" class="submit-btn" style="background-color: #0056b3; color: white; display: block; margin-top: 20px; padding: 10px 20px; text-align: center; border-radius: 5px; text-decoration: none;">Submit Another Grievance</a>
+    </div>
+
+    <script>
+        const grievances = JSON.parse(localStorage.getItem('grievances')) || [];
+
+        const grievanceList = document.getElementById('grievanceList');
+
+        if (grievances.length > 0) {
+            grievances.forEach(grievance => {
+                const grievanceItem = document.createElement('div');
+                grievanceItem.classList.add('grievance-item');
+                grievanceItem.innerHTML = `
+                    <h3>${grievance.title}</h3>
+                    <p><strong>Description:</strong> ${grievance.description}</p>
+                    <p><strong>Category:</strong> ${grievance.category}</p>
+                    <p><strong>Submitted on:</strong> ${grievance.date}</p>
+                `;
+                grievanceList.appendChild(grievanceItem);
+            });
+        } else {
+            grievanceList.innerHTML = '<p class="no-grievances">No grievances submitted yet.</p>';
+        }
+    </script>
+
+<footer>
+    <div class="footer-content">
+        <p>Portal is compatible with all major browsers like Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, etc.</p>
+        <p class="resolution">Best viewed in 1440 x 900 resolution</p>
+        <div class="logos">
+            <img src="gandhi.jpg">
+            <img src="digital.jpg">
+            <img src="digital-india-logo.jpg">
+            <img src="india-gov-logo.jpg">
+            <img src="niclogo.jpg">
+            <img src="made-in-india.jpg">
+            <img src="web-directory.jpg">
+        </div>
+
+
+        <div class="disclaimer">
+            <p><strong>Disclaimer</strong>: Website Policies | Web Information Manager Version 7.0.01092019.0.0, Copyright © 2024 | Last Updated On: 04-12-2024 | Total Visitors: 3,910,662 (since 19-01-2024)</p>
+        </div>
+
+        <p>Powered by <strong>Digital India</strong> | NIC</p>
+    </div>
+</footer>
+</body>
+</html>
